@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anvandhandled</title>
 </head>
 <body>
     <h1>Användarhandledning</h1>
-    <h2>Test</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro necessitatibus quas maxime officia minima vel aliquid error ipsa expedita, dicta harum eos, iste autem debitis corporis accusamus alias placeat est nisi ab ullam nesciunt repellendus. Ipsam tempore nulla voluptatem non laboriosam voluptate vero saepe suscipit fugiat. Totam, hic ratione labore iusto doloremque suscipit expedita maxime ut magnam deserunt! Pariatur excepturi id, tempore nam consectetur rem exercitationem autem amet, nulla tenetur quas dolore asperiores nisi doloribus praesentium dolor reiciendis blanditiis placeat voluptatem quis ex magnam. Tempore in iusto repudiandae consectetur velit veniam repellendus aspernatur error fuga sit, exercitationem amet ex fugiat vel at nam. Reiciendis sint repellendus incidunt, mollitia unde officia ab minima dicta esse debitis amet repellat odit distinctio aperiam dolor odio quasi exercitationem numquam? Animi, quo consequatur? Perspiciatis sapiente rem explicabo quae aperiam dolores, expedita laudantium incidunt veritatis nemo repellendus? In tempora voluptates est dicta odio minima, natus commodi necessitatibus, ducimus ea dolor voluptas, rem aliquam. Obcaecati tenetur dolores suscipit, quisquam reiciendis consequuntur vero esse quos impedit nulla hic commodi deserunt odio id. Aspernatur esse nostrum nulla quidem quod, animi fugit explicabo facere dignissimos placeat obcaecati rem labore omnis corrupti sint voluptas odio. Facilis deleniti nemo aspernatur ullam magnam?</p>
+    <h2>Nedladdning</h2>
+    <p>Programmet kan laddas ner <a href="Ingenjörsprojekt_Victor.vi" downlaod="GrYi1-2 Projekt">här</a></p>
+    <h2>Stegvis Guide</h2>
+    <h3>Hårdvara</h3>
+    <ol>
+        <li>Sätt fast dioden i samma höjd som lasern, polarisatorerna och kvartsplattan.</li>
+        <li>Koppla in lasern till strömkälla och starta den.</li>
+        <li>Polarisatorerna är markerade A och B. Sätt A till 45 grader, och B till 218 grader.
+            Vinkla lasern så att markeringen är roterad likt A (45 grader). Sätt kvartsplattan till 180 grader. 
+        </li>
+        <li>Rikta lasern så att den träffar den första spegeln, reflekteras rakt in i sensorytan, och sedan 
+            reflekteras tillbaka paralellt med den ursprungliga riktningen.
+        </li>
+        <li>Säkerställ att lasern reflekteras rakt in i dioden.</li>
+    </ol>
+    <h3>Mjukvara</h3>
+    <ol>
+        <li>Starta programmet och anslut DAQ:en till datorn.</li>
+        <li>Ett fönster bör öppnas, välj "Begin an application with this device".</li>
+        <li>Vid ny dator behöver DAQ:en konfigureras</li>
+        <li>I blockdiagrammet, högerklicka "volt" drop-down menyn intill "Hämta information från DAQ"</li>
+        <li>Klicka "Edit NI-DAQmx"</li>
+        <li>Kontrollera att "Rate" är lika med 1/5 av "Samples to view" (förslagsvis 20 respektive 100).</li>
+        <li>Kontrollera att "Terminal Configuration" är satt till "RSE", och "Acquisition Mode" är satt till "N:Samples"</li>
+        <li>Klikca "MAX"</li>
+        <li>Klicka "Acquire Signals"</li>
+        <li>Klikca "Analog Signals"</li>
+        <li>Klicka "Voltage"</li>
+        <li>Välj "ai0" som port</li>
+        <li>Klikca "Finish"</li>   
+    </ol>
+    <h4>Funktioner i programmet</h4>
+    <ul>
+        <li>"Highest" och "Lowest" anger grafernas högsta och lägsta y-värde.</li>
+        <li>"Alarm Toggle" stänger av och på larmet.</li>
+        <li>"Alarm Limit" sätter vilken spänning som larmet ska ljuda vid.</li>
+        <li>"Clear" rensar graferna, kan endast användas medan programmet körs och behöver klickas på två gånger.</li>
+        <li>"Path" anger ett .txt dokument där mätdata sparas.</li>
+        <li>"Greatest from last sample" visar det högsta värdet från den senaste mätningen.</li>
+    </ul>
 </body>
 </html>
